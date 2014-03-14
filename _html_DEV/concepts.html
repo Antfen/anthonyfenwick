@@ -1,0 +1,119 @@
+﻿<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript" src="http://malsup.github.com/chili-1.7.pack.js"></script>
+<script type="text/javascript" src="sites/all/themes/acquia_slate/js/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+$(function() {
+
+    $('#slideshow').cycle({
+        fx:      'scrollHorz',
+        timeout:  0,
+        prev:    '#prev',
+        next:    '#next',
+        pager:   '#nav',
+        pagerAnchorBuilder: pagerFactory
+    });
+
+    function pagerFactory(idx, slide) {
+        var s = idx > 3 ? ' style="display:none"' : '';
+        return '<li'+s+'><a href="#">'+(idx+1)+'</a></li>';
+    };
+    
+});
+</script>
+<style type="text/css">
+#block-block-7 {
+position: absolute;
+top:175px;
+right:70px;
+}
+#slideshow {
+
+}
+#content-wrapper .node .content ol li, #content-wrapper .node .content ul li {
+    padding-left: 0;
+}
+#content-wrapper .node .content ol li, #content-wrapper .node .content ul li {
+    margin-left: 0;
+}
+#main { margin: 20px }
+#nav { 
+margin: 5px 0 0 111px;
+position: relative;
+}
+#nav li { 
+float: left; 
+list-style: none;
+padding-left: 6px;
+margin-left: 0;
+}
+
+#nav a { 
+ background: url("sites/all/images/cycle_unselected.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 0;
+    overflow: hidden;
+    padding: 15px 0 0 14px;
+    text-decoration: none;
+ }
+
+#nav li.activeSlide a {
+   background: url("sites/all/images/cycle_selected.png") no-repeat scroll 0 0 transparent;
+}
+
+#nav a:focus { outline: none; }
+
+#prev {
+position: absolute;
+left:-28px;
+top:30px;
+height: 20px;
+width: 20px;
+background: url("sites/all/images/cycle_arrow_left.png") no-repeat scroll 0 0 transparent;
+}
+#next {
+position: absolute;
+right:-28px;
+top:30px;
+height: 20px;
+width: 20px;
+background: url("sites/all/images/cycle_arrow_right.png") no-repeat scroll 0 0 transparent;
+}
+
+.concepts_footer_nav img { 
+padding: 0 7px;
+}
+.concepts_footer_nav_nopad_right { 
+padding: 0;
+}
+</style>
+<div style="width:280px;border:#252525; 1px solid;height:auto;position:relative;">
+
+    <div id="slideshow" class="pics" style="margin:auto;clear:left;margin-top:10px">
+<div class="concepts_footer_nav">
+        <a href="concepts/uks/The Exhumation of the Unknown Soldier France 1993 - Artists Statement"><img src="sites/all/images/concept_1.jpg" width="75px" height="75px" alt="The Exhumation of the Unknown Solider - France 1993" title="The Exhumation of the Unknown Solider - France 1993" /></a>
+		
+        <a href="concepts/painting/14th Station"><img src="sites/all/images/concept_2.jpg" width="75px" height="75px" alt="Stations of the Cross" title="Stations of the Cross" /></a>
+		
+        <a href="concepts/drawings/diptych no1"><img src="sites/all/images/concept_5.jpg" width="75px" height="75px" alt="Drawing & Illustration" title="Drawing & Illustration" /></a>
+</div>
+<div class="concepts_footer_nav">
+        <a href="concepts/paintng/commuters-london"><img src="sites/all/images/concept_4.jpg" width="75px" height="75px" alt="Painting" title="Painting" /></a>
+		
+        <a href="concepts/video/Pozieres"><img src="sites/all/images/concept_3.jpg" width="75px" height="75px" alt="Video" title="Video" /></a>
+		
+		<a border="0" target="_blank" href="http://www.facebook.com/media/set/?set=a.192709960780033.68492.100001230901124&type=1&l=c61f0a903a"><img src="sites/all/images/concept_6.jpg" width="75px" height="75px" alt="Animation" title="Animation" /></a>
+</div>
+<div class="concepts_footer_nav">
+        <a border="0" target="_blank" href="http://www.facebook.com/media/set/?set=a.351193728264988.101276.100001230901124&type=3&l=1d0caef4ac"><img src="sites/all/images/concept_7.jpg" width="75px" height="75px" alt="Swords & Boards" title="Swords & Boards" /></a>
+        <a border="0" target="_blank" href="http://www.facebook.com/media/set/?set=a.147350385315991.45549.100001230901124&type=3&l=1317738c61"><img src="sites/all/images/concept_8.jpg" width="75px" height="75px" alt="Architectural" title="Architectural" /></a>
+		<img src="sites/all/images/concept_3.jpg" />
+</div>
+    </div>
+<div style="text-align:center;margin:auto;width:100%">
+        <a href="#"><span id="prev"></span></a> 
+        <a href="#"><span id="next"></span></a>
+        <ul id="nav"></ul>
+    </div>
+
+</div>

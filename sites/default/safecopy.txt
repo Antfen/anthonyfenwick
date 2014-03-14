@@ -1,0 +1,7 @@
+mysql
+user
+FT5C6CqquzmNbsuJ
+
+dr
+mydrupal
+big_hitter
